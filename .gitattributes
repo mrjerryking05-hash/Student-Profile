@@ -1,2 +1,42 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+#include <iostream>
+using namespace std;
+int main(){
+    string name;
+    int rollNo;
+    float marks1, marks2, marks3;
+    float total, average;
+    cout << "===== Student Result System =====" << endl;
+    cout << "Enter Student Name: ";
+    cin >> name;
+    cout << "Enter Roll Number: ";
+    cin >> rollNo;
+    cout << "Enter Marks of Subject 1: ";
+    cin >> marks1;
+    cout << "Enter Marks of Subject 2: ";
+    cin >> marks2;
+    cout << "Enter Marks of Subject 3: ";
+    cin >> marks3;
+    total = marks1 + marks2 + marks3;
+    average = total / 3;
+    cout << "\n===== Student Report =====" << endl;
+    cout << "Student Name : " << name << endl;
+    cout << "Roll Number  : " << rollNo << endl;
+    cout << "Total Marks  : " << total << endl;
+    cout << "Average      : " << average << endl;
+    if(average >= 80){
+        cout << "Grade        : A" << endl;
+    }
+    else if(average >= 60){
+        cout << "Grade        : B" << endl;
+    }
+    else if(average >= 40){
+        cout << "Grade        : C" << endl;
+    }
+    else{
+        cout << "Grade        : Fail" << endl;
+    }
+    cout << "\nResult Generated Successfully!" << endl;
+    return 0;
+}
